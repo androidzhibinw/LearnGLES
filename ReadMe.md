@@ -27,3 +27,8 @@
 安装： ./installDebug.bat
 
 
+## 示例功能介绍 
+
+| 示例代码文件 | 功能介绍 |API |
+| ------------- | ------------- |-----------|
+|gl_color_app01.cpp|为整个屏幕填充一种颜色(红色)|glClearColor,glClear | 
