@@ -20,11 +20,11 @@
 * Android SDK 
 * Android NDK
 * Android STUDIO (gradle) 
-* Windows 平台
 
 ## 编译运行
 
 编译： ./buildDebug.bat 
+
 安装： ./installDebug.bat
 
 
