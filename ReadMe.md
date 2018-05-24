@@ -19,7 +19,6 @@
 
 * Android SDK 
 * Android NDK
-* Android STUDIO (gradle) 
 
 ## 编译运行
 
