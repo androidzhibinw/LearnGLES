@@ -1,7 +1,7 @@
 # LearnGLES 
 
 ## 介绍 
-这个项目用来记录学习 OpenGLES 的一些点滴，平台使用 Android 平台。
+这个项目用来记录学习 OpenGLES 的一些点滴， Android 平台。
 
 使用 https://github.com/googlesamples/android-ndk/tree/master/native-activity 作为基础框架，这个基于Android 的 NativeActivity， 并使用native_app_glue 库（用来封装Activity 生命周期相关回调），这个工程本身基于 Android NDK 实现 OpenGLES 应用的框架。
 
@@ -14,3 +14,17 @@
 5. 链接库使用 GLESv3, 去掉 GLESv1_CM。
 
 计划是创建很多个 OpenGLES 示例, 每个示例会创建一个 `GLESApp` 来实现。每个 `GLESApp` 继承自 `GLBaseApp` 并在 `Render()` 方法里面实现具体的功能代码。
+
+## 环境配置
+
+* Android SDK 
+* Android NDK
+* Android STUDIO (gradle) 
+* Windows 平台
+
+## 编译运行
+
+编译： ./buildDebug.bat 
+安装： ./installDebug.bat
+
+
