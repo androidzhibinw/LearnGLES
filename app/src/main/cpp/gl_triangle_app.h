@@ -1,11 +1,11 @@
 #pragma once
 
 #include "gl_app.h"
-class GLColorApp : public GLBaseApp
+class GLTriangleApp : public GLBaseApp
 {
     public:
-        GLColorApp(){};
-        ~GLColorApp(){};
+        GLTriangleApp(){};
+        ~GLTriangleApp(){};
         void Initialize(){};
         void Render();
         void ShutDown(){};

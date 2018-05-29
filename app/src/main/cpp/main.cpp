@@ -32,6 +32,7 @@
 #include <android_native_app_glue.h>
 
 #include "gl_color_app.h"
+#include "gl_triangle_app.h"
 
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "LearnOpenGLES", __VA_ARGS__))
 #define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "LearnOpenGLES", __VA_ARGS__))
@@ -398,7 +399,10 @@ void android_main(struct android_app* state) {
 
 GLBaseApp* CreateGLApp()
 {
-    GLBaseApp *colorApp = new GLColorApp();
+    GLBaseApp *app;
 
-    return colorApp;
+    //app = new GLColorApp();
+    app  = new GLTriangleApp();
+
+    return app;
 }
