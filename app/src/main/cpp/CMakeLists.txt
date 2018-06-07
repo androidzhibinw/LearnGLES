@@ -29,7 +29,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -Wall -Werror")
 set(CMAKE_SHARED_LINKER_FLAGS
     "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_onCreate")
 
-add_library(native-activity SHARED main.cpp
+add_library(native-activity SHARED main.cpp utils.cpp
     gl_color_app01.cpp
     gl_point_app02.cpp
     gl_triangle_app03.cpp)
