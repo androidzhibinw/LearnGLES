@@ -28,28 +28,13 @@ void GLPointApp::Initialize()
     "  fragColor = vec4(1.0, 0.0, 0.0, 1.0);     \n"
     "}                                           \n";
 
-    GLuint vertexShader;
-    vertexShader = glCreateShader(GL_VERTEX_SHADER);
+    GLuint shaderProgram = linkShader2Program(vShaderStr,fShaderStr);
 
-    glShaderSource(vertexShader, 1, &vShaderStr, NULL);
-    glCompileShader(vertexShader);
-
-    GLuint fragmentShader;
-    fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragmentShader, 1, &fShaderStr, NULL);
-    glCompileShader(fragmentShader);
-
-    GLuint shaderProgram;
-    shaderProgram = glCreateProgram();
-    glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, fragmentShader);
-
-    glLinkProgram(shaderProgram);
     glUseProgram(shaderProgram);
 
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, mVertices);
-    checkGLError("glVertexAttribPointer");
+    checkGLError("Initialize");
 }
 
 void GLPointApp::Render()
