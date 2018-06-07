@@ -32,3 +32,4 @@
 | 示例代码文件 | 功能介绍 |API |
 | ------------- | ------------- |-----------|
 |gl_color_app01.cpp|为整个屏幕填充一种颜色(红色)|glClearColor,glClear | 
+|gl_point_app02.cpp|在屏幕上画一个点(可控制大小）|glDrawArrays,glEnableVertexAttribArray,glVertexAttribPointer|
