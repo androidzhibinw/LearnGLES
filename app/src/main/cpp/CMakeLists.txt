@@ -32,6 +32,7 @@ set(CMAKE_SHARED_LINKER_FLAGS
 add_library(native-activity SHARED main.cpp utils.cpp
     gl_color_app01.cpp
     gl_point_app02.cpp
+    gl_lines_app03.cpp
     gl_triangle_app03.cpp)
 
 target_include_directories(native-activity PRIVATE

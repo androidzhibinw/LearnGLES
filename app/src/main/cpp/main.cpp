@@ -33,6 +33,7 @@
 
 #include "gl_color_app.h"
 #include "gl_point_app.h"
+#include "gl_lines_app.h"
 #include "gl_triangle_app.h"
 
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "LearnOpenGLES", __VA_ARGS__))
@@ -403,7 +404,8 @@ GLBaseApp* CreateGLApp()
     GLBaseApp *app;
 
     //app = new GLColorApp();
-    app = new GLPointApp();
+    //app = new GLPointApp();
+    app = new GLLinesApp();
     //app  = new GLTriangleApp();
 
     return app;
