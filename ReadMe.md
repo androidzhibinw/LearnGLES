@@ -29,7 +29,10 @@
 
 ## 示例功能介绍 
 
-| 示例代码文件 | 功能介绍 |API |
+| 示例代码文件 | 功能介绍 |截图 |
 | ------------- | ------------- |-----------|
-|gl_color_app01.cpp|为整个屏幕填充一种颜色(红色)|glClearColor,glClear | 
-|gl_point_app02.cpp|在屏幕上画一个点(可控制大小）|glDrawArrays,glEnableVertexAttribArray,glVertexAttribPointer|
+|gl_color_app01.cpp|为整个屏幕填充一种颜色(红色)|![](https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/001_color.png?raw=true) | 
+|gl_point_app02.cpp|在屏幕上画一个点(可控制大小）|![](https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/002_point.png?raw=true)|
+|gl_lines_app03.cpp|在屏幕上画线(GL_LINES) | ![](https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/003_lines.png?raw=true)
+|gl_lines_app03.cpp|在屏幕上画线(GL_LINE_STRIP) | ![](https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/003_line_strip.png?raw=true)
+|gl_lines_app03.cpp|在屏幕上画线(GL_LINE_LOOP) | ![](https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/003_line_loop.png?raw=true)
