@@ -53,8 +53,7 @@ void GLLinesApp::Render()
 {
     glClearColor(1,1,1,1);
     glClear(GL_COLOR_BUFFER_BIT);
-    //glDrawArrays(GL_LINES, 0, 4);
+    glDrawArrays(GL_LINES, 0, 4);
     //glDrawArrays(GL_LINE_STRIP, 0, 4);
-    glDrawArrays(GL_LINE_LOOP, 0, 4);
-
+    //glDrawArrays(GL_LINE_LOOP, 0, 4);
 }
