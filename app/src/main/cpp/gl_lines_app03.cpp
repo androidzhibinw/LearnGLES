@@ -47,6 +47,7 @@ void GLLinesApp::Initialize()
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, mVertices);
     checkGLError("Initialize");
     glLineWidth(10.0);
+    //squareViewport();
 }
 
 void GLLinesApp::Render()

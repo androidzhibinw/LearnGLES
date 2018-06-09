@@ -2,6 +2,9 @@
 #include <android/log.h>
 #include "utils.h"
 
+/*
+* check GL API error, print message in logcat
+*/
 GLuint checkGLError(const char* msg)
 {
 
@@ -30,6 +33,9 @@ GLuint checkGLError(const char* msg)
     return success;
 }
 
+/*
+*compile shader from source
+*/
 GLuint loadShader(GLenum type, const char* shaderSrc)
 {
     GLuint shader;
@@ -64,6 +70,9 @@ GLuint loadShader(GLenum type, const char* shaderSrc)
     return shader;
 }
 
+/**
+* link vertex shader and  fragment shader to program object
+*/
 GLuint linkShader2Program(const char* vShader, const char* fShader)
 {
     GLuint vertexShader = loadShader(GL_VERTEX_SHADER, vShader);
@@ -99,4 +108,34 @@ GLuint linkShader2Program(const char* vShader, const char* fShader)
         return 0;
     }
     return shaderProgram;
+}
+
+/**
+* Change viewport to square
+**/
+GLuint squareViewport()
+{
+    GLint  viewport[4];
+    glGetIntegerv(GL_VIEWPORT, viewport);
+    if(checkGLError("squareViewport"))
+    {
+        return 1;
+    }
+    GLint x = viewport[0];
+    GLint y = viewport[1];
+    GLint width = viewport[2];
+    GLint height = viewport[3];
+    if(x!=0 || y!=0){
+        LOGE("viewport has been set to x=%d,y=%d,width=%d,height=%d",x,y,width,height);
+        return 1;
+    }
+    if(width < height)
+    {
+        glViewport(0, (height-width)/2,width,width);
+    }
+    else
+    {
+        glViewport((width - height)/2,0,height,height);
+    }
+    return 0;
 }
