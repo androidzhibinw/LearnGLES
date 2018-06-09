@@ -31,10 +31,10 @@
 #include <android/log.h>
 #include <android_native_app_glue.h>
 
-#include "gl_color_app.h"
-#include "gl_point_app.h"
-#include "gl_lines_app.h"
-#include "gl_triangle_app.h"
+#include "001_gl_color_app.h"
+#include "002_gl_point_app.h"
+#include "003_gl_lines_app.h"
+#include "004_gl_triangle_app.h"
 
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "LearnOpenGLES", __VA_ARGS__))
 #define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "LearnOpenGLES", __VA_ARGS__))

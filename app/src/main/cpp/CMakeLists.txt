@@ -30,10 +30,10 @@ set(CMAKE_SHARED_LINKER_FLAGS
     "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_onCreate")
 
 add_library(native-activity SHARED main.cpp utils.cpp
-    gl_color_app01.cpp
-    gl_point_app02.cpp
-    gl_lines_app03.cpp
-    gl_triangle_app03.cpp)
+    001_gl_color_app.cpp
+    002_gl_point_app.cpp
+    003_gl_lines_app.cpp
+    004_gl_triangle_app.cpp)
 
 target_include_directories(native-activity PRIVATE
     ${ANDROID_NDK}/sources/android/native_app_glue)
