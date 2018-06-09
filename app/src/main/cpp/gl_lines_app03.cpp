@@ -46,12 +46,15 @@ void GLLinesApp::Initialize()
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, mVertices);
     checkGLError("Initialize");
+    glLineWidth(10.0);
 }
 
 void GLLinesApp::Render()
 {
     glClearColor(1,1,1,1);
     glClear(GL_COLOR_BUFFER_BIT);
-    glDrawArrays(GL_LINES, 0, 4);
+    //glDrawArrays(GL_LINES, 0, 4);
+    //glDrawArrays(GL_LINE_STRIP, 0, 4);
+    glDrawArrays(GL_LINE_LOOP, 0, 4);
 
 }
