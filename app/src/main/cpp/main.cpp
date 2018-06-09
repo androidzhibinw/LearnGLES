@@ -405,8 +405,8 @@ GLBaseApp* CreateGLApp()
 
     //app = new GLColorApp();
     //app = new GLPointApp();
-    app = new GLLinesApp();
-    //app  = new GLTriangleApp();
+    //app = new GLLinesApp();
+    app  = new GLTriangleApp();
 
     return app;
 }
