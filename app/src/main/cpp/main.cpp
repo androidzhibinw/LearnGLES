@@ -35,6 +35,7 @@
 #include "002_gl_point_app.h"
 #include "003_gl_lines_app.h"
 #include "004_gl_triangle_app.h"
+#include "005_gl_regular_polygons.h"
 
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "LearnOpenGLES", __VA_ARGS__))
 #define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "LearnOpenGLES", __VA_ARGS__))
@@ -407,6 +408,7 @@ GLBaseApp* CreateGLApp()
     //app = new GLPointApp();
     //app = new GLLinesApp();
     app  = new GLTriangleApp();
+    //app = new GLRegularPolygonsApp();
 
     return app;
 }
