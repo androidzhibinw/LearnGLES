@@ -36,7 +36,7 @@
 |003_gl_lines_app.cpp|画线(GL_LINES) | <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/003_lines.png?raw=true" width="144" height="256"/>
 |003_gl_lines_app.cpp|画线(GL_LINE_STRIP) | <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/003_line_strip.png?raw=true" width="144" height="256"/>
 |003_gl_lines_app.cpp|画线(GL_LINE_LOOP) | <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/003_line_loop.png?raw=true" width="144" height="256"/>
-|004_gl_triangle.cpp|在画三角形(GL_TRIANGLES) | <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/004_triangles.png?raw=true" width="144" height="256"/>
-|004_gl_triangle.cpp|在画三角形(GL_TRIANGLE_STRIP) | <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/004_triangle_strip.png?raw=true" width="144" height="256"/>
-|004_gl_triangle.cpp|在画三角形(GL_TRIANGLE_FAN) | <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/004_triangle_fan.png?raw=true" width="144" height="256"/>
+|004_gl_triangle.cpp|画三角形(GL_TRIANGLES) | <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/004_triangles.png?raw=true" width="144" height="256"/>
+|004_gl_triangle.cpp|画三角形(GL_TRIANGLE_STRIP) | <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/004_triangle_strip.png?raw=true" width="144" height="256"/>
+|004_gl_triangle.cpp|画三角形(GL_TRIANGLE_FAN) | <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/004_triangle_fan.png?raw=true" width="144" height="256"/>
 
