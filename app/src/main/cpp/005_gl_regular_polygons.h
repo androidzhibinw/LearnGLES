@@ -14,4 +14,5 @@ class GLRegularPolygonsApp : public GLBaseApp
         GLfloat* mVertices;
         GLuint sides;
         GLfloat radius;
+        GLfloat* genRegularPolygons(GLuint sides, GLfloat radius);
 };

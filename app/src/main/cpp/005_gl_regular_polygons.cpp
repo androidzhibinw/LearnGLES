@@ -1,13 +1,16 @@
 #include <GLES3/gl3.h>
 #include <android/log.h>
+#include <cmath>
 #include "005_gl_regular_polygons.h"
 #include "utils.h"
 
+#define PI 3.1415926
 
 void GLRegularPolygonsApp::Initialize()
 {
-    sides = 10;
+    sides = 12;
     radius = 1.0;
+    mVertices = genRegularPolygons(sides,radius);
      const char* vShaderStr=
     "#version 300 es                            \n"
     "layout(location = 0) in vec3 vPosition;    \n"
@@ -32,7 +35,7 @@ void GLRegularPolygonsApp::Initialize()
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, mVertices);
     checkGLError("Initialize");
-    glLineWidth(10.0);
+    glLineWidth(5.0);
     squareViewport();
 }
 
@@ -40,5 +43,32 @@ void GLRegularPolygonsApp::Render()
 {
     glClearColor(1,1,1,1);
     glClear(GL_COLOR_BUFFER_BIT);
-    //glDrawArrays(GL_LINE_LOOP, 0, 4);
+    glDrawArrays(GL_LINE_LOOP, 0, sides);
+}
+
+GLfloat* GLRegularPolygonsApp::genRegularPolygons(GLuint sides, GLfloat radius)
+{
+    GLfloat* vertices=NULL;
+    if(sides <3)
+    {
+       return NULL;
+    }
+    if(radius>1.0 || radius<0.0)
+    {
+        return NULL;
+    }
+
+    vertices = new GLfloat[sides*3];
+    GLfloat offset = 0.0;
+    if(sides%2){
+        offset = -PI;
+    }
+    for(int i=0; i < sides; i++)
+    {
+        vertices[i*3+0] = sin(PI/sides+i*2*PI/sides+offset);
+        vertices[i*3+1] = cos(PI/sides+i*2*PI/sides+offset);
+        vertices[i*3+2] = 0.0;
+    }
+    return vertices;
+
 }
