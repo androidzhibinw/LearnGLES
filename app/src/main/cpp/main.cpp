@@ -409,8 +409,8 @@ GLBaseApp* CreateGLApp()
     //app = new GLPointApp();
     //app = new GLLinesApp();
     //app  = new GLTriangleApp();
-    app = new GLRegularPolygonsApp();
-    //app = new GLCubeApp();
+    //app = new GLRegularPolygonsApp();
+    app = new GLCubeApp();
 
     return app;
 }
