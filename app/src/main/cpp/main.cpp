@@ -37,6 +37,7 @@
 #include "004_gl_triangle_app.h"
 #include "005_gl_regular_polygons.h"
 #include "006_gl_cube_app.h"
+#include "007_gl_frame_checker.h"
 
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "LearnOpenGLES", __VA_ARGS__))
 #define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "LearnOpenGLES", __VA_ARGS__))
@@ -410,7 +411,8 @@ GLBaseApp* CreateGLApp()
     //app = new GLLinesApp();
     //app  = new GLTriangleApp();
     //app = new GLRegularPolygonsApp();
-    app = new GLCubeApp();
+    //app = new GLCubeApp();
+    app = new GLFrameCheckerApp();
 
     return app;
 }

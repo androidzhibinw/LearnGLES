@@ -35,7 +35,9 @@ add_library(native-activity SHARED main.cpp utils.cpp
     003_gl_lines_app.cpp
     004_gl_triangle_app.cpp
     005_gl_regular_polygons.cpp
-    006_gl_cube_app.cpp)
+    006_gl_cube_app.cpp
+    007_gl_frame_checker.cpp
+    )
 
 target_include_directories(native-activity PRIVATE
     ${ANDROID_NDK}/sources/android/native_app_glue)
