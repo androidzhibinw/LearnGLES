@@ -32,8 +32,13 @@ void GLRegularPolygonsApp::Initialize()
 
     glUseProgram(shaderProgram);
 
+    unsigned int VBO;
+    glGenBuffers(1, &VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sides*3*sizeof(GLfloat), mVertices, GL_STATIC_DRAW);
+
     glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, mVertices);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
     checkGLError("Initialize");
     glLineWidth(5.0);
     squareViewport();
