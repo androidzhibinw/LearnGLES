@@ -1,6 +1,5 @@
 #include <cstdlib>
 #include <GLES3/gl3.h>
-#include <android/log.h>
 #include "utils.h"
 
 /*
