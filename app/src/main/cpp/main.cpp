@@ -409,10 +409,10 @@ GLBaseApp* CreateGLApp()
     //app = new GLColorApp();
     //app = new GLPointApp();
     //app = new GLLinesApp();
-    //app  = new GLTriangleApp();
+    //app = new GLTriangleApp();
     //app = new GLRegularPolygonsApp();
-    //app = new GLCubeApp();
-    app = new GLFrameCheckerApp();
+    app = new GLCubeApp();
+    //app = new GLFrameCheckerApp();
 
     return app;
 }
