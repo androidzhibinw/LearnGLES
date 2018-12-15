@@ -40,12 +40,12 @@
 |[004_gl_triangle.cpp][cpp004]|画三角形(GL_TRIANGLE_STRIP) | <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/004_triangle_strip.png?raw=true" width="144" height="256"/>
 |[004_gl_triangle.cpp][cpp004]|画三角形(GL_TRIANGLE_FAN) | <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/004_triangle_fan.png?raw=true" width="144" height="256"/>
 |[005_gl_regular_polygons.cpp][cpp005]|画任意正多边形 | n=12 <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/005_regular_polygons.png?raw=true" width="144" height="256"/>
-|[006_gl_cube_app.cpp][cpp006]|立方体(正交投影)| <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/006_cube.png?raw=true" width="144" height="256"/>
+|[006_gl_cube_app.cpp][cpp006]|立方体(正交投影)| <img src="https://github.com/androidzhibinw/LearnGLES/blob/de6945cd0f2d99c17a3ec540786f4fc1ecc28ea3/screenshots/006_cube.png" width="144" height="256"/>
 
 [cpp001]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/001_gl_color_app.cpp
 [cpp002]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/002_gl_point_app.cpp
 [cpp003]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/003_gl_lines_app.cpp
 [cpp004]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/004_gl_triangle.cpp
 [cpp005]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/005_gl_regular_polygons.cpp
-[cpp006]:https://github.com/androidzhibinw/LearnGLES/blob/de6945cd0f2d99c17a3ec540786f4fc1ecc28ea3/screenshots/006_cube.png
+[cpp006]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/006_cube.cpp
 
