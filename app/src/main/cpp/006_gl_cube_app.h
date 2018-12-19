@@ -65,5 +65,8 @@ class GLCubeApp : public GLBaseApp
             2,3,7,
             2,6,7
         };
+        GLuint mVAO;
         GLuint mEBO;
+        GLuint mVBOPosition;
+        GLuint mVBOColor;
 };

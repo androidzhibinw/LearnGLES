@@ -8,10 +8,7 @@
 #define PI 3.1415926
 void GLCubeApp::Initialize()
 {
-    glClearColor(1,1,1,1);
 
-    glEnable(GL_DEPTH_TEST);
-    glDepthFunc(GL_LESS);
 
     //float x = PI/4.0f;
     glm::mat4 Projection = glm::perspective(glm::radians(45.0f), 4.0f / 3.0f, 0.01f, 100.f);
@@ -49,22 +46,25 @@ void GLCubeApp::Initialize()
     "}                                           \n";
 
     //Rotate(PI/6);
+    glGenVertexArrays(1, &mVAO);
     glGenBuffers(1, &mEBO);
+    glGenBuffers(1, &mVBOPosition);
+    glGenBuffers(1, &mVBOColor);
+
+    glBindVertexArray(mVAO);
+
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mEBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(mIndices), mIndices, GL_STATIC_DRAW);
 
+    LOGI("size is :%d, size GLuint is %d",sizeof(mIndices),sizeof(GLuint));
 
-    unsigned int VBO;
-    glGenBuffers(1, &VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, mVBOPosition);
     glBufferData(GL_ARRAY_BUFFER, sizeof(mVertices), mVertices, GL_STATIC_DRAW);
 
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
 
-    unsigned int VBO2;
-    glGenBuffers(1, &VBO2);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO2);
+    glBindBuffer(GL_ARRAY_BUFFER, mVBOColor);
     glBufferData(GL_ARRAY_BUFFER, sizeof(mColors), mColors, GL_STATIC_DRAW);
 
     glEnableVertexAttribArray(1);
@@ -84,7 +84,9 @@ void GLCubeApp::Initialize()
 
 void GLCubeApp::Render()
 {
-
+    glClearColor(1,1,1,1);
+    glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LESS);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glDrawElements(GL_TRIANGLES, 12*3, GL_UNSIGNED_INT, 0 );
     checkGLError("Render");
