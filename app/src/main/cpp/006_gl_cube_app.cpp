@@ -56,7 +56,7 @@ void GLCubeApp::Initialize()
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mEBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(mIndices), mIndices, GL_STATIC_DRAW);
 
-    LOGI("size is :%d, size GLuint is %d",sizeof(mIndices),sizeof(GLuint));
+    //LOGI("size is :%d, size GLuint is %d",sizeof(mIndices),sizeof(GLuint));
 
     glBindBuffer(GL_ARRAY_BUFFER, mVBOPosition);
     glBufferData(GL_ARRAY_BUFFER, sizeof(mVertices), mVertices, GL_STATIC_DRAW);
@@ -77,7 +77,7 @@ void GLCubeApp::Initialize()
     GLuint MatrixID = glGetUniformLocation(shaderProgram, "MVP");
     glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
     squareViewport();
-    glLineWidth(1.0);
+    queryAttributes();
     checkGLError("Initialize");
 
 }

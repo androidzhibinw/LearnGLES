@@ -9,5 +9,6 @@ GLuint checkGLError(const char* msg);
 GLuint loadShader(GLenum type, const char* shaderSrc);
 GLuint linkShader2Program(const char* vShader, const char* fShader);
 GLuint squareViewport();
+void   queryAttributes();
 
 

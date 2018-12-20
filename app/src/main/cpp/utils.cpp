@@ -139,3 +139,10 @@ GLuint squareViewport()
     }
     return 0;
 }
+
+void queryAttributes()
+{
+    GLint maxVertexAttrs;
+    glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &maxVertexAttrs);
+    LOGI("GL_MAX_VERTEX_ATTRIBS:%d",maxVertexAttrs);
+}
