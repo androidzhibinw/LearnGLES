@@ -7,18 +7,22 @@ void GLTriangleApp::Initialize()
 	const char* vShaderStr=
     "#version 300 es                            \n"
     "layout(location = 0) in vec3 vPosition;    \n"
+    "layout(location = 1) in vec3 vColor;       \n"
+    "out vec3 myColor;                          \n"
     "void main()                                \n"
     "{                                          \n"
     "    gl_Position = vec4(vPosition,1.0);     \n"
+    "    myColor     = vColor;                  \n"
     "}                                          \n"
     "                                           \n";
 
      const char* fShaderStr=
     "#version 300 es                             \n"
+    "in vec3 myColor;                            \n"
     "out vec4 fragColor;                         \n"
     "void main()                                 \n"
     "{                                           \n"
-    "  fragColor = vec4(1.0, 0.0, 0.0, 1.0);     \n"
+    "  fragColor = vec4(myColor, 1.0);            \n"
     "}                                           \n";
 
     GLuint shaderProgram = linkShader2Program(vShaderStr,fShaderStr);
@@ -34,9 +38,11 @@ void GLTriangleApp::Initialize()
     glEnableVertexAttribArray(0);
     //pass 0 as stride also work as data tightly packed.
     //pass 3*sizeof(float), means each vertex data has a size of 3*sizeof(float)
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3*sizeof(GLfloat), (void*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6*sizeof(GLfloat), (void*)0);
     //LOGI("sizeof mVertices = %d",sizeof(mVertices));
     //LOGI("sizeof flaot :=%d",sizeof(GLfloat));
+    glEnableVertexAttribArray(1);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6*sizeof(GLfloat), (void*)(3*sizeof(GLfloat)));
     checkGLError("Initialize");
     squareViewport();
 }
