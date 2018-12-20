@@ -26,7 +26,6 @@ void GLCubeApp::Initialize()
     "#version 300 es                            \n"
     "layout(location = 0) in vec3 vPosition;    \n"
     "layout(location = 1) in vec3 vertexColor;  \n"
-    "uniform mat4 g_projection;                 \n"
     "out vec3 fragmentColor;                    \n"
     "uniform mat4 MVP;                          \n"
     "void main()                                \n"
@@ -75,6 +74,7 @@ void GLCubeApp::Initialize()
     glUseProgram(shaderProgram);
 
     GLuint MatrixID = glGetUniformLocation(shaderProgram, "MVP");
+    LOGI("glGetUniformLocation: MVP pos is %d",MatrixID);//it is 0
     glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
     squareViewport();
     queryAttributes();
