@@ -47,5 +47,5 @@
 [cpp003]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/003_gl_lines_app.cpp
 [cpp004]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/004_gl_triangle.cpp
 [cpp005]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/005_gl_regular_polygons.cpp
-[cpp006]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/006_cube.cpp
+[cpp006]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/006_gl_cube_app.cpp
 
