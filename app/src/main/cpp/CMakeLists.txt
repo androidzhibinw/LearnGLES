@@ -36,7 +36,7 @@ add_library(native-activity SHARED main.cpp utils.cpp
     004_gl_triangle_app.cpp
     005_gl_regular_polygons.cpp
     006_gl_cube_app.cpp
-    007_gl_frame_checker.cpp
+    007_gl_texture.cpp
     )
 
 target_include_directories(native-activity PRIVATE
