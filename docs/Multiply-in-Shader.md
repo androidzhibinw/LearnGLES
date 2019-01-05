@@ -68,6 +68,6 @@ GLSL Shader 中， 常用的类型有基本类型(int/float) 以及向量(vector
     vec3 vA, vB;
     vec3 crossP = cross(vA, vB); 
     //crossP[0] = vA[1] * vB[2] - vA[2] * vB[1]
-    //crossP[1] = vA[2] * vB[0] - vA[0] - vB[2]
-    //crossP[2] = vA[0] * vB[1] - vA[1] - vB[0] 
+    //crossP[1] = vA[2] * vB[0] - vA[0] * vB[2]
+    //crossP[2] = vA[0] * vB[1] - vA[1] * vB[0] 
 
