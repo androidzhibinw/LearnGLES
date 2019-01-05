@@ -47,6 +47,27 @@ GLSL Shader 中， 常用的类型有基本类型(int/float) 以及向量(vector
 - matrix mA 和 matrix mB 相乘：mA 的行分量 和 mB 的列分量 相乘， 得到一个新的 matrix/vector/float 
 
 
-### Vector 的内积(dot) 和 外积(product) 
+### Vector 的内积(dot product) 和 外积(cross product) 
 
+在数学上, 两个向量(Vector)相乘，有两种乘法，一种称为内积(dot product)， 另一种称为外积(cross product).
+
+#### Vector 的内积 
+
+两个向量的内积是一个数， 它的值为两个向量的模(长度)相乘,再乘以两个向量夹角的余弦值。
+
+内积运算在 GLSL 中是通过内置函数 dot 来实现的。
+
+    float dotP = dot(vA, vB); // dotP = vA[0] * vB[0] + vA[1] * vB[1] + vA[2] * vB[2] + vA[3] * vB[3] 
+
+#### Vector 的外积 （三维） 
+
+两个向量的外积是一个向量， 它的值为两个向量的模(长度)相乘,再乘以两个向量夹角的正弦值， 方向垂直两个向量的平面（并符合右手法则） 
+
+内积运算在 GLSL 中是通过内置函数 cross  来实现的。
+
+    vec3 vA, vB;
+    vec3 crossP = cross(vA, vB); 
+    //crossP[0] = vA[1] * vB[2] - vA[2] * vB[1]
+    //crossP[1] = vA[2] * vB[0] - vA[0] - vB[2]
+    //crossP[2] = vA[0] * vB[1] - vA[1] - vB[0] 
 
