@@ -63,7 +63,7 @@ GLSL Shader 中， 常用的类型有基本类型(int/float) 以及向量(vector
 
 两个向量的外积是一个向量， 它的值为两个向量的模(长度)相乘,再乘以两个向量夹角的正弦值， 方向垂直两个向量的平面（并符合右手法则） 
 
-内积运算在 GLSL 中是通过内置函数 cross  来实现的。
+外积运算在 GLSL 中是通过内置函数 cross  来实现的。
 
     vec3 vA, vB;
     vec3 crossP = cross(vA, vB); 
