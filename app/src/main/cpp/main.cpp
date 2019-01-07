@@ -39,6 +39,7 @@
 #include "006_gl_cube_app.h"
 #include "007_gl_texture.h"
 #include "008_gl_texture2.h"
+#include "009_gl_texture3.h"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
@@ -417,7 +418,9 @@ GLBaseApp* CreateGLApp()
     //app = new GLRegularPolygonsApp();
     //app = new GLCubeApp();
     //app = new GLTextureApp();
-    app = new GLTexture2App();
+    //app = new GLTexture2App();
+    app = new GLTexture3App();
+
 
     return app;
 }
