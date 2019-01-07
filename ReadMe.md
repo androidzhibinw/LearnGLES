@@ -41,7 +41,8 @@
 |[004_gl_triangle.cpp][cpp004]|画三角形(GL_TRIANGLE_FAN) | <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/004_triangle_fan.png?raw=true" width="144" height="256"/>
 |[005_gl_regular_polygons.cpp][cpp005]|画任意正多边形 | n=12 <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/005_regular_polygons.png?raw=true" width="144" height="256"/>
 |[006_gl_cube_app.cpp][cpp006]|立方体(正交投影)| <img src="https://github.com/androidzhibinw/LearnGLES/blob/de6945cd0f2d99c17a3ec540786f4fc1ecc28ea3/screenshots/006_cube.png" width="144" height="256"/>
-|[007_gl_texture.cpp][cpp007]|纹理正方形| <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/007_texture.png?raw=true" width="144" height="256"/>|
+|[007_gl_texture.cpp][cpp007]|绘制一张纹理| <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/007_texture.png?raw=true" width="144" height="256"/>|
+|[008_gl_texture2.cpp][cpp008]|混合两张纹理| <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/008_texture2.png?raw=true" width="144" height="256"/>|
 
 [cpp001]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/001_gl_color_app.cpp
 [cpp002]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/002_gl_point_app.cpp
@@ -50,4 +51,4 @@
 [cpp005]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/005_gl_regular_polygons.cpp
 [cpp006]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/006_gl_cube_app.cpp
 [cpp007]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/007_gl_texture.cpp
-
+[cpp008]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/008_gl_texture2.cpp
