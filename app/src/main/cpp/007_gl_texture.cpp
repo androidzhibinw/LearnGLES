@@ -2,7 +2,6 @@
 #include <android/log.h>
 #include "007_gl_texture.h"
 #include "utils.h"
-#define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
 void GLTextureApp::Initialize()

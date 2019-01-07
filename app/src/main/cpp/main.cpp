@@ -38,6 +38,10 @@
 #include "005_gl_regular_polygons.h"
 #include "006_gl_cube_app.h"
 #include "007_gl_texture.h"
+#include "008_gl_texture2.h"
+
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
 
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "LearnOpenGLES", __VA_ARGS__))
 #define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "LearnOpenGLES", __VA_ARGS__))
@@ -412,7 +416,8 @@ GLBaseApp* CreateGLApp()
     //app = new GLTriangleApp();
     //app = new GLRegularPolygonsApp();
     //app = new GLCubeApp();
-    app = new GLTextureApp();
+    //app = new GLTextureApp();
+    app = new GLTexture2App();
 
     return app;
 }

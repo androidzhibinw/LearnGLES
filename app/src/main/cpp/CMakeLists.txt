@@ -37,6 +37,7 @@ add_library(native-activity SHARED main.cpp utils.cpp
     005_gl_regular_polygons.cpp
     006_gl_cube_app.cpp
     007_gl_texture.cpp
+    008_gl_texture2.cpp
     )
 
 target_include_directories(native-activity PRIVATE
