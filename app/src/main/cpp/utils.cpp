@@ -146,3 +146,12 @@ void queryAttributes()
     glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &maxVertexAttrs);
     LOGI("GL_MAX_VERTEX_ATTRIBS:%d",maxVertexAttrs);
 }
+
+void   logMatrix(glm::mat4 &mat)
+{
+    int row = 0;
+    for(;row < 4; row ++)
+    {
+        LOGI("Row[%d]:(%f,%f,%f,%f,)", row, mat[row].x, mat[row].y, mat[row].z, mat[row].w);
+    }
+}

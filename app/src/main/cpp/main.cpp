@@ -40,6 +40,7 @@
 #include "007_gl_texture.h"
 #include "008_gl_texture2.h"
 #include "009_gl_texture3.h"
+#include "0010_gl_transform.h"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
@@ -419,7 +420,8 @@ GLBaseApp* CreateGLApp()
     //app = new GLCubeApp();
     //app = new GLTextureApp();
     //app = new GLTexture2App();
-    app = new GLTexture3App();
+    //app = new GLTexture3App();
+    app = new GLTransformApp();
 
 
     return app;
