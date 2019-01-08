@@ -40,6 +40,7 @@ add_library(native-activity SHARED main.cpp utils.cpp
     008_gl_texture2.cpp
     009_gl_texture3.cpp
     0010_gl_transform.cpp
+    0011_gl_transform2.cpp
     )
 
 target_include_directories(native-activity PRIVATE
