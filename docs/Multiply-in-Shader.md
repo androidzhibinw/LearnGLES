@@ -18,31 +18,31 @@ GLSL Shader 中， 常用的类型有基本类型(int/float) 以及向量(vector
 
 - float 和 float 相乘： 就是一般的两个数相乘
 
-    float newFloat = myFloat * myFloat; // 0.5*0.5 = 0.25
+      float newFloat = myFloat * myFloat; // 0.5*0.5 = 0.25
 
 - vector 和 float 相乘： vector 中每一个分量和 float 相乘，得到一个新的 vector
 
-    vec4 newVector = myFloat * myVector; // (0.5\*1, 0.5\*2, 0.5\*4, 0.5\*4) = (0.5,1,1.5,2)
+      vec4 newVector = myFloat * myVector; // (0.5\*1, 0.5\*2, 0.5\*4, 0.5\*4) = (0.5,1,1.5,2)
 
 - vector vA 和 vector vB 相乘：vA 中的每一个分量和 vB 中的对应分量相乘， 得到一个新的 vector
 
-  vec4 newVector = myVector * myVector; // (1\*1, 2\*2, 3\*3, 4\*4) = (1, 4, 9, 16)
+    vec4 newVector = myVector * myVector; // (1\*1, 2\*2, 3\*3, 4\*4) = (1, 4, 9, 16)
   
 - matrix 和 float 相乘： matrix 中每一个分量和 float 相乘， 得到一个新的 matrix 
     
-    mat4 newMatrix = myMatrix * myFloat; //(1\*0.5,2\*0.5,3\*0.5,4\*0.5,5\*0.5,6\*0.5,7\*0.5,8\*0.5,9\*0.5,10\*0.5,11\*0.5,12\*0.5,13\*0.5,14\*0.5,15\*0.5,16\*0.5)=(0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8)
+      mat4 newMatrix = myMatrix * myFloat; //(1\*0.5,2\*0.5,3\*0.5,4\*0.5,5\*0.5,6\*0.5,7\*0.5,8\*0.5,9\*0.5,10\*0.5,11\*0.5,12\*0.5,13\*0.5,14\*0.5,15\*0.5,16\*0.5)=(0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8)
     
 - matrix 和 vector 相乘： matrix 的行分量和 vector 相乘，得到一个新的 vector 
 
-    vec4 newVector = myMatrix * myVector;
+      vec4 newVector = myMatrix * myVector;
     
-    //newVector[0] = myMatrix[0][0]* myVector[0] + myMatrix[0][1] * myVector[1] + myMatrix[0][2] * myVector[2] + myMatrix[0][3] * myVector[3] = 1\*1 + 2\*2 + 3\*3 + 4\*4 = 1 + 4 + 9 + 16 = 30
+      //newVector[0] = myMatrix[0][0]* myVector[0] + myMatrix[0][1] * myVector[1] + myMatrix[0][2] * myVector[2] + myMatrix[0][3] * myVector[3] = 1\*1 + 2\*2 + 3\*3 + 4\*4 = 1 + 4 + 9 + 16 = 30
     
-    //newVector[1] = 5\*1 + 6\*2 + 7 * 3 + 8 * 4 = 380
+      //newVector[1] = 5\*1 + 6\*2 + 7 * 3 + 8 * 4 = 380
     
-    //newVector[2] = 9 * 1 + 10 * 2 + 11 * 3 + 12 * 4 = 636
+      //newVector[2] = 9 * 1 + 10 * 2 + 11 * 3 + 12 * 4 = 636
     
-    //newVector[3] = 13 * 1 + 14 * 2 + 15 * 3 + 16 * 4 = 892
+      //newVector[3] = 13 * 1 + 14 * 2 + 15 * 3 + 16 * 4 = 892
     
 - matrix mA 和 matrix mB 相乘：mA 的行分量 和 mB 的列分量 相乘， 得到一个新的 matrix/vector/float 
 
