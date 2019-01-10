@@ -42,6 +42,7 @@
 #include "009_gl_texture3.h"
 #include "0010_gl_transform.h"
 #include "0011_gl_transform2.h"
+#include "0012_gl_coordinate.h"
 
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -97,6 +98,7 @@ static int engine_init_display(struct engine* engine) {
             EGL_BLUE_SIZE, 8,
             EGL_GREEN_SIZE, 8,
             EGL_RED_SIZE, 8,
+            EGL_DEPTH_SIZE, 8,
             EGL_NONE
     };
     EGLint w, h, format;
@@ -113,6 +115,7 @@ static int engine_init_display(struct engine* engine) {
      * find the best match if possible, otherwise use the very first one
      */
     eglChooseConfig(display, attribs, nullptr,0, &numConfigs);
+    LOGW("numConfigs:%d", numConfigs);
     std::unique_ptr<EGLConfig[]> supportedConfigs(new EGLConfig[numConfigs]);
     assert(supportedConfigs);
     eglChooseConfig(display, attribs, supportedConfigs.get(), numConfigs, &numConfigs);
@@ -125,8 +128,8 @@ static int engine_init_display(struct engine* engine) {
             eglGetConfigAttrib(display, cfg, EGL_GREEN_SIZE, &g) &&
             eglGetConfigAttrib(display, cfg, EGL_BLUE_SIZE, &b)  &&
             eglGetConfigAttrib(display, cfg, EGL_DEPTH_SIZE, &d) &&
-            r == 8 && g == 8 && b == 8 && d == 0 ) {
-
+            r == 8 && g == 8 && b == 8 && d >= 8 ) {
+            LOGW("depth is %d",d);
             config = supportedConfigs[i];
             break;
         }
@@ -424,7 +427,8 @@ GLBaseApp* CreateGLApp()
     //app = new GLTexture2App();
     //app = new GLTexture3App();
     //app = new GLTransformApp();
-    app = new GLTransform2App();
+    //app = new GLTransform2App();
+    app = new GLCoordinateApp();
 
     return app;
 }
