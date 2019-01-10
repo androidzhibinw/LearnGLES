@@ -47,8 +47,7 @@
 |[0010_gl_transform.cpp][cpp0010]|矩阵变换（平移/旋转/放缩）| <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0010_transform.png?raw=true" width="144" height="256"/>|
 |[0011_gl_transform2.cpp][cpp0011]|矩阵变换（动态：平移/旋转/放缩）| <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0011_transform2.gif?raw=true" width="144" height="256"/>|
 |[0012_gl_coordinate.cpp][cpp0012]|坐标系变换| <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0012_coordinate.gif?raw=true" width="144" height="256"/>|
-
-|[0013_gl_coordinate.cpp][cpp0013]|坐标系变换| <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0013_camera.gif?raw=true" width="144" height="256"/>|
+|[0013_gl_coordinate.cpp][cpp0013]|相机移动 （旋转）| <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0013_camera.gif?raw=true" width="144" height="256"/>|
 
 
 [cpp001]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/001_gl_color_app.cpp
