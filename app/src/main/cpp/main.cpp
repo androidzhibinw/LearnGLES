@@ -43,6 +43,7 @@
 #include "0010_gl_transform.h"
 #include "0011_gl_transform2.h"
 #include "0012_gl_coordinate.h"
+#include "0013_gl_camera.h"
 
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -428,7 +429,8 @@ GLBaseApp* CreateGLApp()
     //app = new GLTexture3App();
     //app = new GLTransformApp();
     //app = new GLTransform2App();
-    app = new GLCoordinateApp();
+    //app = new GLCoordinateApp();
+    app = new GLCameraApp();
 
     return app;
 }

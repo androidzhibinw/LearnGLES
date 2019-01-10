@@ -42,6 +42,7 @@ add_library(native-activity SHARED main.cpp utils.cpp
     0010_gl_transform.cpp
     0011_gl_transform2.cpp
     0012_gl_coordinate.cpp
+    0013_gl_camera.cpp
     )
 
 target_include_directories(native-activity PRIVATE
