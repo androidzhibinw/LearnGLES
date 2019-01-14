@@ -155,3 +155,14 @@ void   logMatrix(glm::mat4 &mat)
         LOGI("Row[%d]:(%f,%f,%f,%f,)", row, mat[row].x, mat[row].y, mat[row].z, mat[row].w);
     }
 }
+
+void logAnisotropy()
+{
+    float anisoMax = 0.0f;
+    glGetFloatv(GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT, &anisoMax);
+
+    float anisoDefault = 0.0f;
+    glGetTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_MAX_ANISOTROPY_EXT, &anisoDefault);
+
+    LOGE("anisoMax:%f => default = %f",anisoMax,anisoDefault);
+}
