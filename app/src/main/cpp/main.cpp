@@ -45,6 +45,7 @@
 #include "0012_gl_coordinate.h"
 #include "0013_gl_camera.h"
 #include "0014_gl_light.h"
+#include "0015_gl_light_diffuse.h"
 
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -432,7 +433,7 @@ GLBaseApp* CreateGLApp()
     //app = new GLTransform2App();
     //app = new GLCoordinateApp();
     //app = new GLCameraApp();
-    app = new GLLightApp();
-
+    //app = new GLLightApp();
+    app = new GLLightDiffApp();
     return app;
 }
