@@ -49,6 +49,8 @@
 |[0012_gl_coordinate.cpp][cpp0012]|坐标系变换| <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0012_coordinate.gif?raw=true" width="144" height="256"/>|
 |[0013_gl_coordinate.cpp][cpp0013]|相机移动 （旋转）| <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0013_camera.gif?raw=true" width="144" height="256"/>|
 |[0014_gl_light.cpp][cpp0014]| 光照 |  <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0014_light.gif?raw=true" width="144" height="256"/>|
+|[0015_gl_diffuse.cpp][cpp0015]| 漫反射 |  <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0015_diffuse.gif?raw=true" width="144" height="256"/>|
+
 
 [cpp001]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/001_gl_color_app.cpp
 [cpp002]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/002_gl_point_app.cpp
@@ -64,4 +66,5 @@
 [cpp0012]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0012_gl_coordiante.cpp
 [cpp0013]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0013_gl_camera.cpp
 [cpp0014]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0014_gl_light.cpp
+[cpp0015]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0014_gl_diffuse.cpp
 
