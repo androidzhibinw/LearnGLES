@@ -66,5 +66,5 @@
 [cpp0012]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0012_gl_coordiante.cpp
 [cpp0013]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0013_gl_camera.cpp
 [cpp0014]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0014_gl_light.cpp
-[cpp0015]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0015_gl_diffuse.cpp
+[cpp0015]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0015_gl_light_diffuse.cpp
 
