@@ -64,4 +64,7 @@ class GLLightDiffApp : public GLBaseApp
         GLuint mProgramCube;
         GLuint mProgramLight;
         float  mRotation;
+        glm::vec3 mLightPos   = glm::vec3(1.2f, 1.5f, 0.0f);
+        glm::vec3 mLightColor = glm::vec3(0.5f, 1.0f, 1.0f);
+        glm::vec3 mCubeColor  = glm::vec3(1.0f, 0.5f, 0.0f);
     };

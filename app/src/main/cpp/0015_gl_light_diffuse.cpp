@@ -83,9 +83,9 @@ void GLLightDiffApp::Render()
 
     glUseProgram(mProgramCube);
 
-    glUniform3f(glGetUniformLocation(mProgramCube, "cubeColor"), 1.0f, 0.5f, 0.0f);
-    glUniform3f(glGetUniformLocation(mProgramCube, "lightColor"), 0.5f, 1.0f, 0.0f);
-    glUniform3f(glGetUniformLocation(mProgramCube, "lightPos"), 1.5f, 2.0f, 0.0f);
+    glUniform3f(glGetUniformLocation(mProgramCube, "cubeColor"), mCubeColor.x, mCubeColor.y, mCubeColor.z);
+    glUniform3f(glGetUniformLocation(mProgramCube, "lightColor"), mLightColor.x, mLightColor.y, mLightColor.z);
+    glUniform3f(glGetUniformLocation(mProgramCube, "lightPos"), mLightPos.x, mLightPos.y,mLightPos.z);
 
     glm::mat4 projection = glm::perspective(glm::radians(45.0f), 1.0f, 0.1f, 100.0f);
 
@@ -104,13 +104,14 @@ void GLLightDiffApp::Render()
 
     //light
     glUseProgram(mProgramLight);
-    glUniform3f(glGetUniformLocation(mProgramLight, "lightColor"), 0.5f, 1.0f, 0.0f);
+    glUniform3f(glGetUniformLocation(mProgramLight, "lightColor"), mLightColor.x, mLightColor.y, mLightColor.z);
 
     glUniformMatrix4fv(glGetUniformLocation(mProgramLight, "view"), 1, GL_FALSE, glm::value_ptr(view));
     glUniformMatrix4fv(glGetUniformLocation(mProgramLight, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
 
     glm::mat4 model2 = glm::mat4(1.0f);
-    model2 = glm::translate(model2, glm::vec3(1.5f, 2.0f, 0.0f));
+    model2 = glm::rotate(glm::mat4(1.0f), glm::radians(mRotation), mLightPos);
+    model2 = glm::translate(model2, mLightPos);
     model2 = glm::scale(model2, glm::vec3(0.2f));
 
     glUniformMatrix4fv(glGetUniformLocation(mProgramLight, "model"), 1, GL_FALSE, glm::value_ptr(model2));
