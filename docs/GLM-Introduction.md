@@ -24,9 +24,14 @@ Github 代码： https://github.com/g-truc/glm
 
 ### GLM 常用函数
 
-- `glm::mat4 perspective(float fovy, float aspect, float zNear, float zFar)`
-- `glm::mat4 lookAt(vec3 cameraPosition, vec3 targetPosition, vec3 cameraUp)`
-- `glm::mat4 rotate`
-- `glm::mat4 translate(mat4 matrix, vec3 translationV)`
-- `glm::mat4 scale`
+- 计算透视投影矩阵 `glm::mat4 perspective(float fovy, float aspect, float zNear, float zFar)` 
+  - fovy:
+  - aspect:
+  - zNear:
+  - zFar:
+- 计算Camera 矩阵 `glm::mat4 lookAt(glm::vec3 cameraPosition, glm::vec3 targetPosition, glm::vec3 cameraUp)`
+- 角度转弧度 `glm::radians(float degree)`
+- 计算旋转矩阵 `glm::mat4 rotate(glm::mat4 m, float angle, glm::vec3 axies)`
+- 计算平移矩阵  `glm::mat4 translate(glm::mat4 matrix, glm::vec3 translationV)`
+- 计算缩放矩阵  `glm::mat4 scale(glm::mat4 m, glm::vec3 factors)`
 
