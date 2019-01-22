@@ -45,6 +45,7 @@ add_library(native-activity SHARED main.cpp utils.cpp
     0013_gl_camera.cpp
     0014_gl_light.cpp
     0015_gl_light_diffuse.cpp
+    0016_gl_light_specular.cpp
     )
 
 target_include_directories(native-activity PRIVATE

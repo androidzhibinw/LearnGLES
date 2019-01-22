@@ -46,6 +46,7 @@
 #include "0013_gl_camera.h"
 #include "0014_gl_light.h"
 #include "0015_gl_light_diffuse.h"
+#include "0016_gl_light_specular.h"
 
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -434,6 +435,7 @@ GLBaseApp* CreateGLApp()
     //app = new GLCoordinateApp();
     //app = new GLCameraApp();
     //app = new GLLightApp();
-    app = new GLLightDiffApp();
+    //app = new GLLightDiffApp();
+    app = new GLLightSpecularApp();
     return app;
 }
