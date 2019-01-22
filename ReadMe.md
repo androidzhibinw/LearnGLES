@@ -50,6 +50,7 @@
 |[0013_gl_coordinate.cpp][cpp0013]|相机移动 （旋转）| <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0013_camera.gif?raw=true" width="144" height="256"/>|
 |[0014_gl_light.cpp][cpp0014]| 光照 |  <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0014_light.gif?raw=true" width="144" height="256"/>|
 |[0015_gl_diffuse.cpp][cpp0015]| 漫反射 |  <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0015_diffuse.gif?raw=true" width="144" height="256"/>|
+|[0016_gl_specular.cpp][cpp0016]| 镜面反射 |  <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0016_specular.gif?raw=true" width="144" height="256"/>|
 
 
 [cpp001]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/001_gl_color_app.cpp
@@ -67,4 +68,6 @@
 [cpp0013]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0013_gl_camera.cpp
 [cpp0014]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0014_gl_light.cpp
 [cpp0015]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0015_gl_light_diffuse.cpp
+[cpp0016]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0016_gl_light_specular.cpp
+
 
