@@ -34,4 +34,5 @@ Github 代码： https://github.com/g-truc/glm
 - 计算旋转矩阵 `glm::mat4 rotate(glm::mat4 m, float angle, glm::vec3 axies)`
 - 计算平移矩阵  `glm::mat4 translate(glm::mat4 matrix, glm::vec3 translationV)`
 - 计算缩放矩阵  `glm::mat4 scale(glm::mat4 m, glm::vec3 factors)`
+- 返回指针地址 `glm::value_ptr`
 
