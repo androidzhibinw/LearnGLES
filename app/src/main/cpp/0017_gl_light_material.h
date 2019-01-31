@@ -64,7 +64,7 @@ class GLLightMaterialApp : public GLBaseApp
         GLuint mProgramCube;
         GLuint mProgramLight;
         float  mRotation;
-        glm::vec3 mLightPos   = glm::vec3(0.8f, 0.0f, 2.0f);
+        glm::vec3 mLightPos   = glm::vec3(0.8f, 0.0f, 1.2f);
         glm::vec3 mLightColor = glm::vec3(1.0f, 1.0f, 1.0f);
         glm::vec3 mCubeColor  = glm::vec3(1.0f, 0.5f, 0.0f);
         glm::vec3 mViewPos    = glm::vec3(0.2f, 1.0f, 3.5f);
@@ -73,7 +73,7 @@ class GLLightMaterialApp : public GLBaseApp
         glm::vec3 mGoldAmbient = glm::vec3(0.24725, 0.1995, 0.0745);
         glm::vec3 mGoldDiffuse = glm::vec3(0.75164, 0.60648, 0.22648);
         glm::vec3 mGoldSpecular = glm::vec3(0.628281, 0.555802, 0.366065);
-        float mGoldShininess   = 0.4f;
+        float mGoldShininess   = 0.4f * 128;
 
         glm::vec3 mLightAmbient = mLightColor * glm::vec3(0.2f);
         glm::vec3 mLightDiffuse = mLightColor * glm::vec3(0.5f);
