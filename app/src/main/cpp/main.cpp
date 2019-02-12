@@ -49,6 +49,7 @@
 #include "0016_gl_light_specular.h"
 #include "0017_gl_light_material.h"
 #include "0018_gl_light_maps.h"
+#include "0019_gl_light_maps_specular.h"
 
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -440,6 +441,7 @@ GLBaseApp* CreateGLApp()
     //app = new GLLightDiffApp();
     //app = new GLLightSpecularApp();
     //app = new GLLightMaterialApp();
-    app = new GLLightMapsApp();
+    //app = new GLLightMapsApp();
+    app = new GLLightMapsSpecularApp();
     return app;
 }
