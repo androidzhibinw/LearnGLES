@@ -2,6 +2,7 @@
 
 ## 介绍 
 这个项目用来记录学习 OpenGLES 的一些点滴， Android 平台。
+主要参考  `https://learnopengl.com`
 
 使用 https://github.com/googlesamples/android-ndk/tree/master/native-activity 作为基础框架，这个基于Android 的 NativeActivity， 并使用native_app_glue 库（用来封装Activity 生命周期相关回调），这个工程本身基于 Android NDK 实现 OpenGLES 应用的框架。
 
