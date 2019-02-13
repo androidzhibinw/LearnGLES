@@ -16,22 +16,22 @@ void GLLightDiffApp::Initialize()
 
      const char* vCubeShaderStr=
      {
-        #include "shaders/0015_cube_v.glsl.in"
+        #include "shaders/include/0015_cube_v.glsl.in"
      };
 
     const char* vLightShaderStr=
      {
-        #include "shaders/0015_light_v.glsl.in"
+        #include "shaders/include/0015_light_v.glsl.in"
      };
 
      const char* fCubeShaderStr=
      {
-        #include "shaders/0015_cube_f.glsl.in"
+        #include "shaders/include/0015_cube_f.glsl.in"
      };
  
     const char* fLightShaderStr=
      {
-        #include "shaders/0015_light_f.glsl.in"
+        #include "shaders/include/0015_light_f.glsl.in"
      };
 
     glGenVertexArrays(1, &mCubeVAO);

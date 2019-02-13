@@ -22,27 +22,15 @@ void GLCubeApp::Initialize()
     glm::mat4 MVP        = Projection * View * Model; // Remember, matrix multiplication is the other way around
 
 
-    const char* vShaderStr=
-    "#version 300 es                            \n"
-    "layout(location = 0) in vec3 vPosition;    \n"
-    "layout(location = 1) in vec3 vertexColor;  \n"
-    "out vec3 fragmentColor;                    \n"
-    "uniform mat4 MVP;                          \n"
-    "void main()                                \n"
-    "{                                          \n"
-    "    gl_Position = MVP * vec4(vPosition,1.0);\n"
-    "    fragmentColor = vertexColor;           \n"
-    "}                                          \n"
-    "                                           \n";
+     const char* vShaderStr=
+     {
+        #include "shaders/include/006_v.glsl.in"
+     };
 
      const char* fShaderStr=
-    "#version 300 es                             \n"
-    "out vec3 fragColor;                         \n"
-    "in vec3 fragmentColor;                      \n"
-    "void main()                                 \n"
-    "{                                           \n"
-    "  fragColor = fragmentColor;                \n"
-    "}                                           \n";
+     {
+        #include "shaders/include/006_f.glsl.in"
+     };
 
     //Rotate(PI/6);
     glGenVertexArrays(1, &mVAO);

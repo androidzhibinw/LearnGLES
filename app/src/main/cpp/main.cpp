@@ -50,6 +50,7 @@
 #include "0017_gl_light_material.h"
 #include "0018_gl_light_maps.h"
 #include "0019_gl_light_maps_specular.h"
+#include "0020_gl_light_directional.h"
 
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -433,7 +434,7 @@ GLBaseApp* CreateGLApp()
     //app = new GLTextureApp();
     //app = new GLTexture2App();
     //app = new GLTexture3App();
-    //app = new GLTransformApp();
+    //app = new GLTransformApp(); //10
     //app = new GLTransform2App();
     //app = new GLCoordinateApp();
     //app = new GLCameraApp();
@@ -442,6 +443,7 @@ GLBaseApp* CreateGLApp()
     //app = new GLLightSpecularApp();
     //app = new GLLightMaterialApp();
     //app = new GLLightMapsApp();
-    app = new GLLightMapsSpecularApp();
+    //app = new GLLightMapsSpecularApp();
+    app = new GLLightDirectApp();  //20
     return app;
 }

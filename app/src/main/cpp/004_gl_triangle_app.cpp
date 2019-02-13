@@ -4,26 +4,16 @@
 
 void GLTriangleApp::Initialize()
 {
-	const char* vShaderStr=
-    "#version 300 es                            \n"
-    "layout(location = 0) in vec3 vPosition;    \n"
-    "layout(location = 1) in vec3 vColor;       \n"
-    "out vec3 myColor;                          \n"
-    "void main()                                \n"
-    "{                                          \n"
-    "    gl_Position = vec4(vPosition,1.0);     \n"
-    "    myColor     = vColor;                  \n"
-    "}                                          \n"
-    "                                           \n";
+     const char* vShaderStr=
+     {
+        #include "shaders/include/004_v.glsl.in"
+     };
 
      const char* fShaderStr=
-    "#version 300 es                             \n"
-    "in vec3 myColor;                            \n"
-    "out vec4 fragColor;                         \n"
-    "void main()                                 \n"
-    "{                                           \n"
-    "  fragColor = vec4(myColor, 1.0);            \n"
-    "}                                           \n";
+     {
+        #include "shaders/include/004_f.glsl.in"
+     };
+
 
     GLuint shaderProgram = linkShader2Program(vShaderStr,fShaderStr);
 

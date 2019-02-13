@@ -8,13 +8,13 @@ void GLTexture2App::Initialize()
 {
      const char* vShaderStr=
      {
-        #include "shaders/008_v.glsl.in"
+        #include "shaders/include/008_v.glsl.in"
      };
 
 
      const char* fShaderStr=
      {
-        #include "shaders/008_f.glsl.in"
+        #include "shaders/include/008_f.glsl.in"
      };
  
 

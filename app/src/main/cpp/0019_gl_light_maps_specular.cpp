@@ -16,22 +16,22 @@ void GLLightMapsSpecularApp::Initialize()
 
      const char* vCubeShaderStr=
      {
-        #include "shaders/0019_cube_v.glsl.in"
+        #include "shaders/include/0019_cube_v.glsl.in"
      };
 
     const char* vLightShaderStr=
      {
-        #include "shaders/0019_light_v.glsl.in"
+        #include "shaders/include/0019_light_v.glsl.in"
      };
 
      const char* fCubeShaderStr=
      {
-        #include "shaders/0019_cube_f.glsl.in"
+        #include "shaders/include/0019_cube_f.glsl.in"
      };
  
     const char* fLightShaderStr=
      {
-        #include "shaders/0019_light_f.glsl.in"
+        #include "shaders/include/0019_light_f.glsl.in"
      };
 
     glGenVertexArrays(1, &mCubeVAO);
@@ -85,7 +85,6 @@ void GLLightMapsSpecularApp::Initialize()
         LOGE("Fail to load image!");
     }
     stbi_image_free(data);
-
 
     glBindTexture(GL_TEXTURE_2D, mTextureSpecular);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);

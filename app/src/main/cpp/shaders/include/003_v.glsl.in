@@ -1,0 +1,6 @@
+"#version 300 es\n"
+"layout(location = 0) in vec3 vPosition;\n"
+"void main()\n"
+"{\n"
+"    gl_Position = vec4(vPosition,1.0);\n"
+"}\n"

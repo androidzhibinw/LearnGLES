@@ -1,6 +1,6 @@
 #include <GLES3/gl3.h>
 #include <android/log.h>
-#include "0018_gl_light_maps.h"
+#include "0020_gl_light_directional.h"
 #include "utils.h"
 #include "stb_image.h"
 #include "glm/glm.hpp"
@@ -8,7 +8,7 @@
 #include "glm/gtc/type_ptr.hpp"
 
 
-void GLLightMapsSpecularApp::Initialize()
+void GLLightDirectApp::Initialize()
 {
     mRotation = 0.0f;
 
@@ -16,27 +16,28 @@ void GLLightMapsSpecularApp::Initialize()
 
      const char* vCubeShaderStr=
      {
-        #include "shaders/0018_cube_v.glsl.in"
+        #include "shaders/include/0020_cube_v.glsl.in"
      };
 
     const char* vLightShaderStr=
      {
-        #include "shaders/0018_light_v.glsl.in"
+        #include  "shaders/include/0020_light_v.glsl.in"
      };
 
      const char* fCubeShaderStr=
      {
-        #include "shaders/0018_cube_f.glsl.in"
+        #include "shaders/include/0020_cube_f.glsl.in"
      };
  
     const char* fLightShaderStr=
      {
-        #include "shaders/0018_light_f.glsl.in"
+        #include "shaders/include/0020_light_f.glsl.in"
      };
 
     glGenVertexArrays(1, &mCubeVAO);
     glGenBuffers(1, &mVBO);
     glGenTextures(1, &mTexture);
+    glGenTextures(1, &mTextureSpecular);
 
     glBindBuffer(GL_ARRAY_BUFFER, mVBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(mVertices), mVertices, GL_STATIC_DRAW);
@@ -85,6 +86,23 @@ void GLLightMapsSpecularApp::Initialize()
     }
     stbi_image_free(data);
 
+    glBindTexture(GL_TEXTURE_2D, mTextureSpecular);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    data = stbi_load("/sdcard/Android/data/com.example.native_activity/files/container_specular.jpg", &width, &height, &chnnels, 0);
+    if(data)
+    {
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    else
+    {
+        LOGE("Fail to load image!");
+    }
+    stbi_image_free(data);
 
     mProgramCube = linkShader2Program(vCubeShaderStr, fCubeShaderStr);
     mProgramLight= linkShader2Program(vLightShaderStr, fLightShaderStr);
@@ -96,7 +114,7 @@ void GLLightMapsSpecularApp::Initialize()
 
 }
 
-void GLLightMapsSpecularApp::Render()
+void GLLightDirectApp::Render()
 {
 
     mRotation += 0.2f;
@@ -115,7 +133,8 @@ void GLLightMapsSpecularApp::Render()
     //glUniform3f(glGetUniformLocation(mProgramCube, "material.ambient"), mGoldAmbient.x, mGoldAmbient.y, mGoldAmbient.z);
     //glUniform3f(glGetUniformLocation(mProgramCube, "material.diffuse"), 0.5f, 0.5f, 0.5f);
     glUniform1i(glGetUniformLocation(mProgramCube, "material.diffuse"), 0);
-    glUniform3f(glGetUniformLocation(mProgramCube, "material.specular"),mGoldSpecular.x, mGoldSpecular.y,mGoldSpecular.z);
+    glUniform1i(glGetUniformLocation(mProgramCube, "material.specular"), 1);
+    //glUniform3f(glGetUniformLocation(mProgramCube, "material.specular"),mGoldSpecular.x, mGoldSpecular.y,mGoldSpecular.z);
     glUniform1f(glGetUniformLocation(mProgramCube, "material.shininess"), mGoldShininess);
     glUniform3f(glGetUniformLocation(mProgramCube, "light.ambient"), mLightAmbient.x, mLightAmbient.y, mLightAmbient.z);
     glUniform3f(glGetUniformLocation(mProgramCube, "light.diffuse"), mLightDiffuse.x, mLightDiffuse.y, mLightDiffuse.z);
@@ -136,6 +155,8 @@ void GLLightMapsSpecularApp::Render()
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, mTexture);
 
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, mTextureSpecular);
 
     glUniform3f(glGetUniformLocation(mProgramCube, "viewPos"), mViewPos.x, mViewPos.y,mViewPos.z);
 

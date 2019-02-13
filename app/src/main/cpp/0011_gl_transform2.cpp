@@ -16,13 +16,13 @@ void GLTransform2App::Initialize()
 
      const char* vShaderStr=
      {
-        #include "shaders/0010_v.glsl.in"
+        #include "shaders/include/0011_v.glsl.in"
      };
 
 
      const char* fShaderStr=
      {
-        #include "shaders/0010_f.glsl.in"
+        #include "shaders/include/0011_f.glsl.in"
      };
  
 

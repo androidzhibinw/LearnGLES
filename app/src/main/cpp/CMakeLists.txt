@@ -49,6 +49,7 @@ add_library(native-activity SHARED main.cpp utils.cpp
     0017_gl_light_material.cpp
     0018_gl_light_maps.cpp
     0019_gl_light_maps_specular.cpp
+    0020_gl_light_directional.cpp
     )
 
 target_include_directories(native-activity PRIVATE

@@ -39,13 +39,13 @@ void GLCameraApp::Initialize()
 
      const char* vShaderStr=
      {
-        #include "shaders/0013_v.glsl.in"
+        #include "shaders/include/0013_v.glsl.in"
      };
 
 
      const char* fShaderStr=
      {
-        #include "shaders/0013_f.glsl.in"
+        #include "shaders/include/0013_f.glsl.in"
      };
  
 

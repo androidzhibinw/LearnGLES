@@ -1,0 +1,7 @@
+"#version 300 es\n"
+"in vec3 myColor;\n"
+"out vec4 fragColor;\n"
+"void main()\n"
+"{\n"
+"    fragColor = vec4(myColor, 1.0);\n"
+"}\n"

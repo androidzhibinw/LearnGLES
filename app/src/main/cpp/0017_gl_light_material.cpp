@@ -16,22 +16,22 @@ void GLLightMaterialApp::Initialize()
 
      const char* vCubeShaderStr=
      {
-        #include "shaders/0017_cube_v.glsl.in"
+        #include "shaders/include/0017_cube_v.glsl.in"
      };
 
     const char* vLightShaderStr=
      {
-        #include "shaders/0017_light_v.glsl.in"
+        #include "shaders/include/0017_light_v.glsl.in"
      };
 
      const char* fCubeShaderStr=
      {
-        #include "shaders/0017_cube_f.glsl.in"
+        #include "shaders/include/0017_cube_f.glsl.in"
      };
  
     const char* fLightShaderStr=
      {
-        #include "shaders/0017_light_f.glsl.in"
+        #include "shaders/include/0017_light_f.glsl.in"
      };
 
     glGenVertexArrays(1, &mCubeVAO);

@@ -12,21 +12,14 @@ void GLRegularPolygonsApp::Initialize()
     radius = 1.0;
     mVertices = genRegularPolygons(sides,radius);
      const char* vShaderStr=
-    "#version 300 es                            \n"
-    "layout(location = 0) in vec3 vPosition;    \n"
-    "void main()                                \n"
-    "{                                          \n"
-    "    gl_Position = vec4(vPosition,1.0);     \n"
-    "}                                          \n"
-    "                                           \n";
+     {
+        #include "shaders/include/005_v.glsl.in"
+     };
 
      const char* fShaderStr=
-    "#version 300 es                             \n"
-    "out vec4 fragColor;                         \n"
-    "void main()                                 \n"
-    "{                                           \n"
-    "  fragColor = vec4(1.0, 0.0, 0.0, 1.0);     \n"
-    "}                                           \n";
+     {
+        #include "shaders/include/005_f.glsl.in"
+     };
 
     GLuint shaderProgram = linkShader2Program(vShaderStr,fShaderStr);
 

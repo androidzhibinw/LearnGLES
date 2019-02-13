@@ -12,13 +12,13 @@ void GLPointApp::Initialize()
 
      const char* vShaderStr=
      {
-        #include "shaders/002_v.glsl.in"
+        #include "shaders/include/002_v.glsl.in"
      };
 
 
      const char* fShaderStr=
      {
-        #include "shaders/002_f.glsl.in"
+        #include "shaders/include/002_f.glsl.in"
      };
  
 

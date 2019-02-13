@@ -8,13 +8,13 @@ void GLTexture3App::Initialize()
 {
      const char* vShaderStr=
      {
-        #include "shaders/009_v.glsl.in"
+        #include "shaders/include/009_v.glsl.in"
      };
 
 
      const char* fShaderStr=
      {
-        #include "shaders/009_f.glsl.in"
+        #include "shaders/include/009_f.glsl.in"
      };
  
 

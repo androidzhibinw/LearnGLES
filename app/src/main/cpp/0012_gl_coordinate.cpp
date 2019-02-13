@@ -39,13 +39,13 @@ void GLCoordinateApp::Initialize()
 
      const char* vShaderStr=
      {
-        #include "shaders/0012_v.glsl.in"
+        #include "shaders/include/0012_v.glsl.in"
      };
 
 
      const char* fShaderStr=
      {
-        #include "shaders/0012_f.glsl.in"
+        #include "shaders/include/0012_f.glsl.in"
      };
  
 
