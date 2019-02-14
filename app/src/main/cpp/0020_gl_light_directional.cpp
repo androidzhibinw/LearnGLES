@@ -139,7 +139,7 @@ void GLLightDirectApp::Render()
     glUniform3f(glGetUniformLocation(mProgramCube, "light.ambient"), mLightAmbient.x, mLightAmbient.y, mLightAmbient.z);
     glUniform3f(glGetUniformLocation(mProgramCube, "light.diffuse"), mLightDiffuse.x, mLightDiffuse.y, mLightDiffuse.z);
     glUniform3f(glGetUniformLocation(mProgramCube, "light.specular"), mLightSpecular.x, mLightSpecular.y, mLightSpecular.z);
-    glUniform3f(glGetUniformLocation(mProgramCube, "light.position"), mLightPos.x, mLightPos.y,mLightPos.z);
+    glUniform3f(glGetUniformLocation(mProgramCube, "light.direction"), -0.5f, -1.0f, -0.5f);
 
     glm::mat4 projection = glm::perspective(glm::radians(45.0f), 1.0f, 0.1f, 100.0f);
 
@@ -147,28 +147,31 @@ void GLLightDirectApp::Render()
     glm::vec3 cameraUp(0.0, 1.0, 0.0);
     glm::mat4 view = glm::lookAt(mViewPos, targetP,cameraUp);
 
-    glm::mat4 model = glm::rotate(glm::mat4(1.0f), glm::radians(mRotation), glm::vec3(0.0f,1.0f,0.0f));
+    //glm::mat4 model = glm::rotate(glm::mat4(1.0f), glm::radians(mRotation), glm::vec3(1.0f,1.0f,0.0f));
 
     //model = glm::scale(model, glm::vec3(2.0f));
-
-
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, mTexture);
 
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, mTextureSpecular);
 
+    glBindVertexArray(mCubeVAO);
     glUniform3f(glGetUniformLocation(mProgramCube, "viewPos"), mViewPos.x, mViewPos.y,mViewPos.z);
-
-    glUniformMatrix4fv(glGetUniformLocation(mProgramCube, "model"), 1, GL_FALSE, glm::value_ptr(model));
     glUniformMatrix4fv(glGetUniformLocation(mProgramCube, "view"), 1, GL_FALSE, glm::value_ptr(view));
     glUniformMatrix4fv(glGetUniformLocation(mProgramCube, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
 
-    glBindVertexArray(mCubeVAO);
-    glDrawArrays(GL_TRIANGLES,0, 36);
+    for (int i=0;i<10;i++)
+    {
+        glm::mat4 model = glm::rotate(glm::mat4(1.0f), glm::radians(mRotation + i*30), glm::vec3(1.0f,1.0f,0.0f));
+        //model = glm::translate(model,glm::vec3(-1 + i*0.2, 0.0,0.0));
+        glUniformMatrix4fv(glGetUniformLocation(mProgramCube, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        glDrawArrays(GL_TRIANGLES,0, 36);
+
+    }
 
     //light
-    glUseProgram(mProgramLight);
+    /*glUseProgram(mProgramLight);
     glUniform3f(glGetUniformLocation(mProgramLight, "lightColor"), mLightColor.x, mLightColor.y, mLightColor.z);
 
     glUniformMatrix4fv(glGetUniformLocation(mProgramLight, "view"), 1, GL_FALSE, glm::value_ptr(view));
@@ -182,7 +185,7 @@ void GLLightDirectApp::Render()
     glUniformMatrix4fv(glGetUniformLocation(mProgramLight, "model"), 1, GL_FALSE, glm::value_ptr(model2));
 
     glBindVertexArray(mLightVAO);
-    glDrawArrays(GL_TRIANGLES,0, 36);
+    glDrawArrays(GL_TRIANGLES,0, 36);*/
 
     checkGLError("draw");
 }
