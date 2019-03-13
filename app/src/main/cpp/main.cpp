@@ -51,6 +51,7 @@
 #include "0018_gl_light_maps.h"
 #include "0019_gl_light_maps_specular.h"
 #include "0020_gl_light_directional.h"
+#include "0021_gl_light_point.h"
 
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -444,6 +445,7 @@ GLBaseApp* CreateGLApp()
     //app = new GLLightMaterialApp();
     //app = new GLLightMapsApp();
     //app = new GLLightMapsSpecularApp();
-    app = new GLLightDirectApp();  //20
+    //app = new GLLightDirectApp();  //20
+    app = new GLLightPointApp();
     return app;
 }

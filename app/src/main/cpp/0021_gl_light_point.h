@@ -3,11 +3,11 @@
 #include "gl_app.h"
 #include "glm/glm.hpp"
 
-class GLLightDirectApp : public GLBaseApp
+class GLLightPointApp : public GLBaseApp
 {
     public:
-        GLLightDirectApp(){};
-        ~GLLightDirectApp(){};
+        GLLightPointApp(){};
+        ~GLLightPointApp(){};
         void Initialize();
         void Render();
         void ShutDown(){};
@@ -78,6 +78,7 @@ class GLLightDirectApp : public GLBaseApp
         glm::vec3 mLightAmbient = glm::vec3(0.1f,0.1f,0.1f);
         glm::vec3 mLightDiffuse = glm::vec3(0.5f,0.5f,0.5f);
         glm::vec3 mLightSpecular = glm::vec3(1.0f,1.0f,1.0f);
+        glm::vec3 mLightPosition = glm::vec3(0.5f, 1.0f, 1.5f);
 
         GLuint mTexture;
         GLuint mTextureSpecular;
