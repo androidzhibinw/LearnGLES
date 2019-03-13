@@ -56,7 +56,7 @@
 |[0018_gl_light_maps.cpp][cpp0018]| 材质（光照/漫反射） |  <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0018_diffusemap.gif?raw=true" width="144" height="256"/>|
 |[0019_gl_light_maps_specular.cpp][cpp0019]| 材质（光照/镜面反射） |  <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0019_specularmap.gif?raw=true" width="144" height="256"/>|
 |[0020_gl_light_directional.cpp][cpp0020]| 平行光照 |  <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0020_light_directional.gif?raw=true" width="144" height="256"/>|
-
+|[0021_gl_light_point.cpp][cpp0021]| 点光源-随距离衰减 |  <img src="https://github.com/androidzhibinw/LearnGLES/blob/master/screenshots/0021_light_point.gif?raw=true" width="144" height="256"/>|
 
 [cpp001]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/001_gl_color_app.cpp
 [cpp002]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/002_gl_point_app.cpp
@@ -78,5 +78,6 @@
 [cpp0018]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0018_gl_light_maps.cpp
 [cpp0019]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0019_gl_light_maps_specular.cpp
 [cpp0020]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0020_gl_light_directional.cpp
+[cpp0021]:https://github.com/androidzhibinw/LearnGLES/blob/master/app/src/main/cpp/0021_gl_light_point.cpp
 
 
