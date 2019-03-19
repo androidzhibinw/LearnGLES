@@ -29,6 +29,13 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -Wall -Werror")
 set(CMAKE_SHARED_LINKER_FLAGS
     "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_onCreate")
 
+## add assimp 
+
+add_library(lib_assimp STATIC IMPORTED)
+set_target_properties(lib_assimp PROPERTIES IMPORTED_LOCATION
+    ${CMAKE_CURRENT_SOURCE_DIR}/static_libs/libassimp.so)
+
+
 add_library(native-activity SHARED main.cpp utils.cpp
     001_gl_color_app.cpp
     002_gl_point_app.cpp
@@ -55,7 +62,8 @@ add_library(native-activity SHARED main.cpp utils.cpp
     )
 
 target_include_directories(native-activity PRIVATE
-    ${ANDROID_NDK}/sources/android/native_app_glue)
+    ${ANDROID_NDK}/sources/android/native_app_glue
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/assimp)
 
 # add lib dependencies
 target_link_libraries(native-activity
@@ -63,4 +71,5 @@ target_link_libraries(native-activity
     native_app_glue
     EGL
     GLESv3
-    log)
+    log
+    lib_assimp)
